@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericApi", "GenericApi\GenericApi.csproj", "{2DED45B2-CF2A-4FDD-8C56-3AC3A13184BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericApi.test", "GenericApi.test\GenericApi.test.csproj", "{449B5A1C-2C56-4415-9C05-A8989339CFAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DED45B2-CF2A-4FDD-8C56-3AC3A13184BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DED45B2-CF2A-4FDD-8C56-3AC3A13184BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DED45B2-CF2A-4FDD-8C56-3AC3A13184BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DED45B2-CF2A-4FDD-8C56-3AC3A13184BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{449B5A1C-2C56-4415-9C05-A8989339CFAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449B5A1C-2C56-4415-9C05-A8989339CFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449B5A1C-2C56-4415-9C05-A8989339CFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449B5A1C-2C56-4415-9C05-A8989339CFAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
