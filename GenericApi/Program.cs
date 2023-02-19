@@ -1,12 +1,17 @@
+using GenericApi.Core.Repositories;
+using GenericApi.Interfaces;
+using GenericApi.Services.User;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
+// Add services to the container.
+builder.Services.AddSingleton<IUserRepository>(x => new UserRepository(builder.Configuration.GetConnectionString("Generic_Api")));
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
