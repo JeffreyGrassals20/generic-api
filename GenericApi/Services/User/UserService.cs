@@ -14,6 +14,6 @@ public class UserService : IUserService
     public async Task<string> SaveUserAsync(Models.User user)
     {
         var result = await this._userRepository.SaveUser(user);
-        return result.LastName;
+        return result.Name;
     }
 }
