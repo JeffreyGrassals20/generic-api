@@ -1,4 +1,6 @@
+using System.Data.SqlClient;
 using GenericApi.Interfaces;
+using GenericApi.Models;
 
 namespace GenericApi.Core.Repositories;
 
@@ -13,10 +15,27 @@ public class UserRepository : IUserRepository
     
     public async Task<Models.User> SaveUser(Models.User user)
     {
-        return new Models.User
+        try
         {
-            Name = "Jeffrey",
-            LastName = this._connectionString
-        };
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                string sql = "SELECT GETDATE()";
+
+                var command = new SqlCommand(sql, connection);
+                var result = command.ExecuteNonQuery();
+
+                return new User
+                {
+                    Name = result.ToString()
+                };
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+
+       
     }
 }
